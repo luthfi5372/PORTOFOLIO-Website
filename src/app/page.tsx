@@ -1,7 +1,7 @@
 "use client";
 
 import dynamic from 'next/dynamic';
-import { LiquidBackground } from "@/components/animations";
+import { NeuralFlowBackground } from "@/components/animations";
 import Navbar from "@/components/ui/Navbar";
 import Hero from "@/components/sections/Hero";
 import { SoundToggle } from "@/components/ui";
@@ -34,7 +34,7 @@ export default function Home() {
   return (
     <main className="relative min-h-screen">
       <SoundToggle />
-      <LiquidBackground>
+      <NeuralFlowBackground>
         <Navbar />
         <Hero />
         
@@ -57,7 +57,7 @@ export default function Home() {
         {/* Contact Section */}
         <ContactSection />
         <Footer />
-      </LiquidBackground>
+      </NeuralFlowBackground>
     </main>
   );
 }

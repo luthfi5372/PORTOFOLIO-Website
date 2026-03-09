@@ -61,8 +61,8 @@ function ProjectCard({ project, index }: { project: any; index: number }) {
   const mouseX = useMotionValue(0.5);
   const mouseY = useMotionValue(0.5);
 
-  // Gunakan useSpring untuk menghaluskan transisi (Inovasi: Smooth Animation)
-  const springConfig = { stiffness: 150, damping: 20, mass: 0.5 };
+  // Gunakan useSpring dengan damping: 30 untuk tampilan lebih tenang/profesional
+  const springConfig = { stiffness: 150, damping: 30, mass: 0.5 };
   const mouseXSpring = useSpring(mouseX, springConfig);
   const mouseYSpring = useSpring(mouseY, springConfig);
 
@@ -145,18 +145,21 @@ function ProjectCard({ project, index }: { project: any; index: number }) {
         />
       </motion.div>
       
-      {/* Konten dengan efek Floating (Teks & Deskripsi) */}
+      {/* Konten dengan efek Floating (Teks & Deskripsi) - Project Prism */}
       <div 
         style={{ transform: "translateZ(75px)", transformStyle: "preserve-3d" }}
         className="absolute inset-0 p-12 flex flex-col justify-end z-20"
       >
-        <span className="text-xs font-black tracking-[0.3em] text-white/80 mb-3 uppercase backdrop-blur-sm bg-black/20 px-3 py-1 rounded-full w-fit">
-          {project.category}
-        </span>
-        <h3 className="text-4xl font-black text-white mb-3 tracking-tight drop-shadow-lg">
+        <div className="flex items-center gap-2 mb-3">
+          <div className="w-2 h-2 rounded-full bg-vivid-violet animate-pulse" />
+          <span className="text-xs font-black tracking-widest text-vivid-violet uppercase">
+            {project.category} Module
+          </span>
+        </div>
+        <h3 className="text-4xl font-black text-white mb-2 tracking-tight drop-shadow-lg">
           {project.title}
         </h3>
-        <p className="text-white/70 text-base font-medium leading-relaxed max-w-[280px] opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0">
+        <p className="text-white/70 text-sm font-semibold leading-relaxed group-hover:text-white/90 transition-colors">
           {project.desc}
         </p>
       </div>
