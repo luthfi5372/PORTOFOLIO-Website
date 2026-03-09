@@ -13,6 +13,11 @@ const AboutSection = dynamic(() => import("@/components/sections/AboutSection"),
   loading: () => <div className="h-96 animate-pulse bg-white/10 rounded-3xl m-6" />
 });
 
+const ImpactMetrics = dynamic(() => import("@/components/sections/ImpactMetrics"), {
+  ssr: false,
+  loading: () => <div className="h-48 animate-pulse bg-white/5 rounded-3xl mx-6" />
+});
+
 const ProjectGallery = dynamic(() => import("@/components/sections/ProjectGallery"), {
   ssr: false
 });
@@ -37,6 +42,9 @@ export default function Home() {
       <NeuralFlowBackground>
         <Navbar />
         <Hero />
+        
+        {/* Impact Metrics - Show achievements before projects */}
+        <ImpactMetrics />
         
         {/* About Section */}
         <section id="about">
