@@ -61,8 +61,8 @@ function ProjectCard({ project, index }: { project: any; index: number }) {
   const mouseX = useMotionValue(0.5);
   const mouseY = useMotionValue(0.5);
 
-  // Gunakan useSpring dengan damping: 30 untuk tampilan lebih tenang/profesional
-  const springConfig = { stiffness: 150, damping: 30, mass: 0.5 };
+  // Gunakan useSpring dengan damping: 40 untuk gerakan lebih "berwibawa"
+  const springConfig = { stiffness: 150, damping: 40, mass: 0.5 };
   const mouseXSpring = useSpring(mouseX, springConfig);
   const mouseYSpring = useSpring(mouseY, springConfig);
 
@@ -113,6 +113,9 @@ function ProjectCard({ project, index }: { project: any; index: number }) {
       {/* Glass Overlay */}
       <div className="absolute inset-0 bg-white/5 backdrop-blur-xl border border-white/20 rounded-[45px] z-1" />
       
+      {/* Grid Lines - Blueprint Effect */}
+      <div className="absolute inset-0 z-0 opacity-[0.03] bg-[linear-gradient(rgba(255,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:40px_40px] rounded-[45px]" />
+      
       {/* Abstract Shapes - Dynamic Liquid Effect */}
       <motion.div 
         className="absolute inset-0 z-0 overflow-hidden rounded-[45px]"
@@ -150,6 +153,14 @@ function ProjectCard({ project, index }: { project: any; index: number }) {
         style={{ transform: "translateZ(75px)", transformStyle: "preserve-3d" }}
         className="absolute inset-0 p-12 flex flex-col justify-end z-20"
       >
+        {/* Status Indicator - Top Right */}
+        <div className="absolute top-10 right-10 flex items-center gap-2">
+          <span className="text-[10px] font-bold text-white/40 tracking-widest uppercase">
+            System Active
+          </span>
+          <div className="w-1.5 h-1.5 rounded-full bg-vivid-cyan animate-ping" />
+        </div>
+        
         <div className="flex items-center gap-2 mb-3">
           <div className="w-2 h-2 rounded-full bg-vivid-violet animate-pulse" />
           <span className="text-xs font-black tracking-widest text-vivid-violet uppercase">

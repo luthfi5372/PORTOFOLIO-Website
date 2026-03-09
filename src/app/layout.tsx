@@ -19,11 +19,11 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://luthfi-aziz.com"),
   title: {
-    default: "Luthfi Aziz | Liquid Portfolio",
+    default: "Luthfi Aziz | Innovation Synthesis & Strategic Leadership",
     template: "%s | Luthfi Aziz"
   },
-  description: "Praktisi Inovasi & IoT. Menghadirkan solusi teknologi dengan estetika Liquid Glass.",
-  keywords: ["IoT", "Web Development", "Next.js", "Liquid Design", "Research", "NCC", "PIKIR", "President NCC", "Chairman PIKIR"],
+  description: "Innovation Hub - Sintesis Riset & Inovasi Teknologi. Menghubungkan visi strategis NCC dengan ekosistem riset PIKIR.",
+  keywords: ["Innovation", "Leadership", "Research", "NCC", "PIKIR", "President NCC", "Chairman PIKIR", "Strategic Leadership", "Digital Transformation"],
   authors: [{ name: "Muhammad Luthfi Aziz" }],
   creator: "Muhammad Luthfi Aziz",
   
@@ -32,15 +32,15 @@ export const metadata: Metadata = {
     type: "website",
     locale: "id_ID",
     url: "https://luthfi-aziz.com",
-    title: "Luthfi Aziz | Liquid Portfolio",
-    description: "Eksplorasi proyek IoT dan riset inovatif dalam antarmuka masa depan.",
-    siteName: "Luthfi Aziz Portfolio",
+    title: "Luthfi Aziz | Innovation Synthesis",
+    description: "Innovation Hub - Sintesis Riset & Inovasi Teknologi.",
+    siteName: "Luthfi Aziz - Innovation Hub",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Luthfi Aziz Liquid Portfolio Preview",
+        alt: "Luthfi Aziz Innovation Hub Preview",
       },
     ],
   },
@@ -48,8 +48,8 @@ export const metadata: Metadata = {
   // Twitter Configuration
   twitter: {
     card: "summary_large_image",
-    title: "Luthfi Aziz | Liquid Portfolio",
-    description: "IoT Practitioner & Innovation Researcher.",
+    title: "Luthfi Aziz | Innovation Synthesis",
+    description: "Innovation Hub - Sintesis Riset & Inovasi Teknologi.",
     images: ["/og-image.jpg"],
   },
 
