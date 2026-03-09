@@ -1,0 +1,244 @@
+@import "tailwindcss";
+
+:root {
+  /* Vivid Liquid Color Palette - iOS 26 Edition */
+  --background: #F8FAFC;
+  --foreground: #0F172A;
+  --card: #ffffff;
+  --card-foreground: #0F172A;
+  
+  /* Vivid Colors - High Contrast */
+  --vivid-violet: #8B5CF6;
+  --vivid-cyan: #06B6D4;
+  --vivid-rose: #F43F5E;
+  --vivid-slate: #0F172A;
+  
+  /* Primary accent colors - Vivid */
+  --primary: #8B5CF6;
+  --primary-foreground: #ffffff;
+  --secondary: #06B6D4;
+  --secondary-foreground: #0F172A;
+  
+  /* Muted tones */
+  --muted: #F1F5F9;
+  --muted-foreground: #64748B;
+  
+  /* Accent colors */
+  --accent: #F43F5E;
+  --accent-foreground: #ffffff;
+  --destructive: #EF4444;
+  --destructive-foreground: #ffffff;
+  
+  /* Border and input */
+  --border: #E2E8F0;
+  --input: #E2E8F0;
+  --ring: #8B5CF6;
+  
+  /* Radius */
+  --radius: 0.75rem;
+  
+  /* Glass Colors - Enhanced visibility */
+  --glass-white: rgba(255, 255, 255, 0.15);
+  --glass-thick: rgba(255, 255, 255, 0.4);
+  --glass-border: rgba(139, 92, 246, 0.3);
+  
+  /* Backdrop blur sizes */
+  --blur-xs: 2px;
+  --blur-liquid: 40px;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  
+  /* Vivid Colors */
+  --color-vivid-violet: var(--vivid-violet);
+  --color-vivid-cyan: var(--vivid-cyan);
+  --color-vivid-rose: var(--vivid-rose);
+  --color-vivid-slate: var(--vivid-slate);
+  
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-glass-white: var(--glass-white);
+  --color-glass-thick: var(--glass-thick);
+  --color-glass-border: var(--glass-border);
+  --font-sans: var(--font-plus-jakarta);
+  --font-mono: var(--font-jetbrains-mono);
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 0.25rem);
+  --radius-sm: calc(var(--radius) - 0.5rem);
+  --radius-canva: 1rem;
+  
+  /* Soft shadows */
+  --shadow-soft: 0 2px 8px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02);
+  --shadow-soft-hover: 0 8px 24px rgba(0, 0, 0, 0.08), 0 2px 8px rgba(0, 0, 0, 0.04);
+  --shadow-glass: 0 8px 32px rgba(0, 0, 0, 0.12);
+  --shadow-liquid: 0 20px 50px rgba(0, 0, 0, 0.1);
+  --shadow-glass-inner: inset 0 0 20px rgba(255, 255, 255, 0.1);
+  --shadow-glass-heavy: 0 10px 30px -5px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-glow-violet: 0 0 20px rgba(139, 92, 246, 0.4);
+  
+  /* Blur sizes */
+  --blur-xs: var(--blur-xs);
+  --blur-liquid: var(--blur-liquid);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0f172a;
+    --foreground: #f8fafc;
+    --card: #1e293b;
+    --card-foreground: #f8fafc;
+    
+    /* Dark mode brand colors */
+    --brand-purple: #a78bfa;
+    --brand-purple-light: #c4b5fd;
+    --brand-pink: #f472b6;
+    --brand-light: #064e3b;
+    --brand-cream: #422006;
+    
+    --primary: #a78bfa;
+    --primary-foreground: #0f172a;
+    --secondary: #f472b6;
+    --secondary-foreground: #0f172a;
+    
+    --muted: #1e293b;
+    --muted-foreground: #94a3b8;
+    
+    --accent: #34d399;
+    --accent-foreground: #0f172a;
+    --destructive: #f87171;
+    --destructive-foreground: #0f172a;
+    
+    --border: #334155;
+    --input: #334155;
+    --ring: #a78bfa;
+    
+    --glass-white: rgba(0, 0, 0, 0.2);
+    --glass-border: rgba(255, 255, 255, 0.1);
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--muted);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--muted-foreground);
+}
+
+/* Noise texture overlay */
+.noise-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+}
+
+/* Glass effect utilities */
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(var(--blur-liquid));
+  -webkit-backdrop-filter: blur(var(--blur-liquid));
+  border: 1px solid var(--glass-border);
+}
+
+.glass-dark {
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(var(--blur-liquid));
+  -webkit-backdrop-filter: blur(var(--blur-liquid));
+  border: 1px solid var(--glass-border);
+}
+
+/* Hardware acceleration */
+.gpu-accelerated {
+  transform: translateZ(0);
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+/* Optimized glass card with GPU acceleration */
+.glass-card {
+  transform: translateZ(0);
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  overflow: hidden;
+}
+
+/* Liquid glass element optimization */
+.liquid-glass-element {
+  will-change: transform, opacity, backdrop-filter;
+  transform: translateZ(0);
+  overflow: hidden;
+}
+
+/* Adaptive Glass Grain - Performance Mode */
+.glass-grain {
+  position: relative;
+}
+
+.glass-grain::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.03;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  filter: brightness(100%) contrast(150%);
+}
+
+/* Performance-aware grain - reduced on low-end devices */
+@media (prefers-reduced-motion: reduce), (prefers-reduced-data: reduce) {
+  .glass-grain::before {
+    opacity: 0;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,0 +1,13 @@
+# Robots.txt for Luthfi Aziz Liquid Portfolio
+
+User-agent: *
+Allow: /
+
+# Disallow admin and studio routes
+Disallow: /studio
+Disallow: /api
+Disallow: /admin
+
+# Sitemap location
+Sitemap: https://luthfi-aziz.com/sitemap.xml
+
